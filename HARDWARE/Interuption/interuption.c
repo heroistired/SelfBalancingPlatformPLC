@@ -81,3 +81,11 @@ void usart1_send_char(u8 c)
     USART_SendData(USART1,c);   
 
 } 
+
+//串口2发送1个字符 
+//c:要发送的字符
+void usart2_send_char(u8 c)
+{
+	while(USART_GetFlagStatus(USART2,USART_FLAG_TC)==RESET);
+    USART_SendData(USART2,c);   
+} 

@@ -18,5 +18,6 @@ void IntSetCtrInterval(int interval);
 void InitSin();  
 void upload_data(u16 CMD, int data);
 void usart1_send_char(u8 c);
+void usart2_send_char(u8 c);
 
 #endif

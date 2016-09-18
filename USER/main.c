@@ -47,6 +47,7 @@ void TIM4_IRQHandler(void)
 		upload_data(CMD_CLOCK, 0);
 		upload_data(CMD_PITCH, pitch);
 		//upload_data(CMD_YAW, yaw);
+		usart2_send_char('p');
 		
 		TIM_ClearITPendingBit(TIM4,TIM_IT_Update);  //清除中断标志位
 	}
